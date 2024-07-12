@@ -46,7 +46,7 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
         $$\mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle$$
     - **Total Loss**:
 
-        $$\mathcal{L}_{total} = D_{CLIP}(G(w), t) + \lambda_{L2} \|w - w_s\|^2 + \lambda_{ID}\mathcal{L}_{ID}(w)$$
+        $$\mathcal{L}_{total} = {D}_{CLIP}(G(w), t) + {\lambda}_{L2} \|w - w_s\|^2 + {\lambda}_{ID}\mathcal{L}_{ID}(w)$$
 
 #### Example Results
 
