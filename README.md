@@ -54,12 +54,12 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
 
 Prompt: **A man with purple hair**
 
-![Purple hair](https://github.com/xomyakes/styleclip/blob/main/optimization_color.jpg?raw=true)
+![Purple hair](https://github.com/xomyakes/styleclip/blob/main/blob/optimization_color.jpg?raw=true)
 
 Prompt: **A pretty guy**
 
 <!-- ![Results](optimization_pretty_guy.jpg) -->
-![Pretty Guy](https://github.com/xomyakes/styleclip/blob/main/optimization_pretty_guy.jpg?raw=true)
+![Pretty Guy](https://github.com/xomyakes/styleclip/blob/main/blob/optimization_pretty_guy.jpg?raw=true)
 
 
 ### Latent Mapper
@@ -87,17 +87,17 @@ This approach involves training a model to transform latent vectors in the Style
 Prompt: **Glasses**
 
 
-![Glasses](https://github.com/xomyakes/styleclip/blob/main/mapper_glasses.jpg?raw=true)
+![Glasses](https://github.com/xomyakes/styleclip/blob/main/blob/mapper_glasses.jpg?raw=true)
 <!-- (mapper_glasses.jpg) -->
 
 Prompt: **The witcher**
 
-![Witcher](https://github.com/xomyakes/styleclip/blob/main/mapper_witcher.jpg?raw=true)
+![Witcher](https://github.com/xomyakes/styleclip/blob/main/blob/mapper_witcher.jpg?raw=true)
 <!-- (mapper_witcher.jpg) -->
 
 Prompt: **Joker**
 
-![Joker](https://github.com/xomyakes/styleclip/blob/main/mapper_joker.jpg?raw=true)
+![Joker](https://github.com/xomyakes/styleclip/blob/main/blob/mapper_joker.jpg?raw=true)
 <!-- (mapper_joker.jpg) -->
 
 ## Requirements
