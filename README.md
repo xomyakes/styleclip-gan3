@@ -41,13 +41,12 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
     - **CLIP Loss**: Cosine distance between the CLIP embedding of the image and the text embedding.
         $$D_{CLIP}(G(w), t) = 1 - \cos (E_{image}, E_{text})$$
     - **L2 Loss**: Prevents the latent vector from straying too far from the start vector.
-        $$\lambda_{L2} \|w - w_s\|_2$$
+        $$\lambda_{L2} \|w - w_s\|^2$$
     - **ID Regularization**: Maintains identity during transformations using a pre-trained ArcFace model.
         $$\mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle$$
     - **Total Loss**:
-        $$\mathcal{L}_{total} = {D}_{CLIP}(G(w), t) + \lambda_{L2} \|w - {w}_{s}\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)$$
 
-        $$\mathcal{L}_{total} = {D}_{CLIP}(G(w), t) + \lambda_{L2} \|w - {w}_{s}\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)$$
+        $$\mathcal{L}_{total} = D_{CLIP}(G(w), t) + \lambda_{L2} \|w - w_s\|^2 + \lambda_{ID}\mathcal{L}_{ID}(w)$$
 
 #### Example Results
 
@@ -76,7 +75,7 @@ This approach involves training a model to transform latent vectors in the Style
     - **CLIP Loss**:
         $$D_{CLIP}(G(w + M_t(w)), t) = 1 - \cos (E_{image}, E_{text})$$
     - **L2 Loss**:
-        $$\lambda_{L2} \|M_t(w)\|_2$$
+        $$\lambda_{L2} \|M_t(w)\|^2$$
     - **ID Regularization**:
         $$\mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle$$
 
