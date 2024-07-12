@@ -48,15 +48,18 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
 
         $$\mathcal{L}_{total} = {D}_{CLIP}(G(w), t) + {\lambda}_{L2} \|w - w_s\|^2 + {\lambda}_{ID}\mathcal{L}_{ID}(w)$$
 
+        (In some reason github doesn't like the last formula :D)
+
 #### Example Results
 
 Prompt: **A man with purple hair**
 
-![Results](optimization_color.jpg)
+![Purple hair](https://github.com/xomyakes/styleclip/blob/main/optimization_color.jpg?raw=true)
 
 Prompt: **A pretty guy**
 
-![Results](optimization_pretty_guy.jpg)
+<!-- ![Results](optimization_pretty_guy.jpg) -->
+![Pretty Guy](https://github.com/xomyakes/styleclip/blob/main/optimization_pretty_guy.jpg?raw=true)
 
 
 ### Latent Mapper
@@ -83,15 +86,19 @@ This approach involves training a model to transform latent vectors in the Style
 
 Prompt: **Glasses**
 
-![Glasses](mapper_glasses.jpg)
+
+![Glasses](https://github.com/xomyakes/styleclip/blob/main/mapper_glasses.jpg?raw=true)
+<!-- (mapper_glasses.jpg) -->
 
 Prompt: **The witcher**
 
-![Witcher](mapper_witcher.jpg)
+![Witcher](https://github.com/xomyakes/styleclip/blob/main/mapper_witcher.jpg?raw=true)
+<!-- (mapper_witcher.jpg) -->
 
 Prompt: **Joker**
 
-![Witcher](mapper_joker.jpg)
+![Joker](https://github.com/xomyakes/styleclip/blob/main/mapper_joker.jpg?raw=true)
+<!-- (mapper_joker.jpg) -->
 
 ## Requirements
 
