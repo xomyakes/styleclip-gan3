@@ -32,8 +32,8 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
 #### Steps
 
 1. **Generate Initial Image**:
-    - Select a random latent vector \( z \) from the latent space of StyleGAN, generating a style latent vector \( w_s \in W+ \).
-    - Generate an initial image \( I = G(w) \) using StyleGAN based on this vector.
+    - Select a random latent vector $\( z \)$ from the latent space of StyleGAN, generating a style latent vector $\( w_s \in W+ \)$.
+    - Generate an initial image $\( I = G(w) \)$ using StyleGAN based on this vector.
 2. **Extract Embeddings**:
     - Pass the image \( I \) through the CLIP model to obtain an image embedding \( E_{image} \).
     - Pass the text description \( t \) through the text part of the CLIP model to obtain a text embedding \( E_{text} \).
@@ -59,11 +59,11 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
 
 Prompt: **A man with purple hair**
 
-![Results](blob/optimization_color.jpg)
+![Results](optimization_color.jpg)
 
 Prompt: **A pretty guy**
 
-![Results](blob/optimization_pretty_guy.jpg)
+![Results](optimization_pretty_guy.jpg)
 
 
 ### Latent Mapper
@@ -98,15 +98,15 @@ This approach involves training a model to transform latent vectors in the Style
 
 Prompt: **Glasses**
 
-![Glasses](blob/mapper_glasses.jpg)
+![Glasses](mapper_glasses.jpg)
 
 Prompt: **The witcher**
 
-![Witcher](blob/mapper_witcher.jpg)
+![Witcher](mapper_witcher.jpg)
 
 Prompt: **Joker**
 
-![Witcher](blob/mapper_joker.jpg)
+![Witcher](mapper_joker.jpg)
 
 ## Requirements
 
