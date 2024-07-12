@@ -1,0 +1,14 @@
+MM-CelebA-HQ-Dataset
+__pycache__
+dlib-19.24.4
+dataset
+encoder
+arcface
+samples
+stylegan3
+editing
+shape_predictor_68_face*
+*.log
+*.pt
+*.jpg
+*.png
