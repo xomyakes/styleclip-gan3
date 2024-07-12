@@ -33,27 +33,27 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
 
 1. **Generate Initial Image**:
     - Select a random latent vector $z$ from the latent space of StyleGAN, generating a style latent vector $w_s \in W+$.
-    - Generate an initial image $ I = G(w) $ using StyleGAN based on this vector.
+    - Generate an initial image $I = G(w)$ using StyleGAN based on this vector.
 2. **Extract Embeddings**:
-    - Pass the image $\ I $ through the CLIP model to obtain an image embedding $\ E_{image} $.
-    - Pass the text description $\ t $ through the text part of the CLIP model to obtain a text embedding $\ E_{text} $.
+    - Pass the image $I$ through the CLIP model to obtain an image embedding $E_{image}$.
+    - Pass the text description $t$ through the text part of the CLIP model to obtain a text embedding $E_{text}$.
 3. **Loss Function**:
     - **CLIP Loss**: Cosine distance between the CLIP embedding of the image and the text embedding.
-        $\
+        $$
         D_{CLIP}(G(w), t) = 1 - \cos (E_{image}, E_{text})
-        $
+        $$
     - **L2 Loss**: Prevents the latent vector from straying too far from the start vector.
-        $\
+        $$
         \lambda_{L2} \|w - w_s\|_2
-        $
+        $$
     - **ID Regularization**: Maintains identity during transformations using a pre-trained ArcFace model.
-        $\[
+        $$
         \mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle
-        \]$
+        $$
     - **Total Loss**:
-        $\[
+        $$
         \mathcal{L}_{total} = D_{CLIP}(G(w), t) + \lambda_{L2} \|w - w_s\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)
-        \]$
+        $$
 
 #### Example Results
 
@@ -76,23 +76,23 @@ This approach involves training a model to transform latent vectors in the Style
     - Latent Mapper is a neural network that transforms the latent vector so that the resulting image matches the textual description.
 2. **Architecture**:
     - The architecture splits the StyleGAN layers into three groups: coarse, medium, and fine.
-    - For a latent code \( w = (w_c, w_m, w_f) \), the mapper is defined as:
-        \[
+    - For a latent code $w = (w_c, w_m, w_f)$, the mapper is defined as:
+        $$
         M_t(w) = (M_t^c(w_c), M_t^m(w_m), M_t^f(w_f))
-        \]
+        $$
 3. **Loss Function**:
     - **CLIP Loss**:
-        \[
+        $$
         D_{CLIP}(G(w + M_t(w)), t) = 1 - \cos (E_{image}, E_{text})
-        \]
+        $$
     - **L2 Loss**:
-        \[
+        $$
         \lambda_{L2} \|M_t(w)\|_2
-        \]
+        $$
     - **ID Regularization**:
-        \[
+        $$
         \mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle
-        \]
+        $$
 
 #### Example Results
 
