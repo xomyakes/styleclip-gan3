@@ -35,25 +35,25 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
     - Select a random latent vector $\( z \)$ from the latent space of StyleGAN, generating a style latent vector $\( w_s \in W+ \)$.
     - Generate an initial image $\( I = G(w) \)$ using StyleGAN based on this vector.
 2. **Extract Embeddings**:
-    - Pass the image \( I \) through the CLIP model to obtain an image embedding \( E_{image} \).
-    - Pass the text description \( t \) through the text part of the CLIP model to obtain a text embedding \( E_{text} \).
+    - Pass the image $\( I \)$ through the CLIP model to obtain an image embedding $\( E_{image} \)$.
+    - Pass the text description $\( t \)$ through the text part of the CLIP model to obtain a text embedding $\( E_{text} \)$.
 3. **Loss Function**:
     - **CLIP Loss**: Cosine distance between the CLIP embedding of the image and the text embedding.
-        \[
+        $\[
         D_{CLIP}(G(w), t) = 1 - \cos (E_{image}, E_{text})
-        \]
+        \]$
     - **L2 Loss**: Prevents the latent vector from straying too far from the start vector.
-        \[
+        $\[
         \lambda_{L2} \|w - w_s\|_2
-        \]
+        \]$
     - **ID Regularization**: Maintains identity during transformations using a pre-trained ArcFace model.
-        \[
+        $\[
         \mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle
-        \]
+        \]$
     - **Total Loss**:
-        \[
+        $\[
         \mathcal{L}_{total} = D_{CLIP}(G(w), t) + \lambda_{L2} \|w - w_s\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)
-        \]
+        \]$
 
 #### Example Results
 
