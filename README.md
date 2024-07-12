@@ -45,9 +45,9 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
     - **ID Regularization**: Maintains identity during transformations using a pre-trained ArcFace model.
         $$\mathcal{L}_{ID}(w) = 1 - \langle R(G(w_s)), R(G(w)) \rangle$$
     - **Total Loss**:
-        $\mathcal{L}_{total} = D_{CLIP}(G(w), t) + \lambda_{L2} \|w - w_s\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)$
-        
-        $$\mathcal{L}_{total} = D_{CLIP}(G(w), t)$$
+        $$\mathcal{L}_{total} = {D}_{CLIP}(G(w), t) + \lambda_{L2} \|w - {w}_{s}\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)$$
+
+        $$\mathcal{L}_{total} = {D}_{CLIP}(G(w), t) + \lambda_{L2} \|w - {w}_{s}\|_2 + \lambda_{ID} \mathcal{L}_{ID}(w)$$
 
 #### Example Results
 
