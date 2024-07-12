@@ -32,7 +32,7 @@ The optimization approach in StyleCLIP involves altering the latent vectors of S
 #### Steps
 
 1. **Generate Initial Image**:
-    - Select a random latent vector $ z $ from the latent space of StyleGAN, generating a style latent vector $ w_s \in W+ $.
+    - Select a random latent vector $z$ from the latent space of StyleGAN, generating a style latent vector $w_s \in W+$.
     - Generate an initial image $ I = G(w) $ using StyleGAN based on this vector.
 2. **Extract Embeddings**:
     - Pass the image $\ I $ through the CLIP model to obtain an image embedding $\ E_{image} $.
