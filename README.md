@@ -146,7 +146,7 @@ Next you need to manualy download several pre-trainde model/weights.
     
     Rename it to **arcface.pth** and put inside **arface** folder
 
-3. If you wish pre-trained **latent mappers** from [**here**]() and put theirs into **mappers** folder
+3. If you wish pre-trained **latent mappers** from [**here**](https://drive.google.com/drive/folders/18aKO0BrwsBMY_6gcLSe-GN3AzS26AiA_?usp=sharing) and put theirs into **mappers** folder
 
 **P.S.** Renaming downloaded files and put in inside specific folders in all steps above is not necessary and you can just pass paths to src.loader.Loader for load your models but it's highly recommended to easily usage.
 
